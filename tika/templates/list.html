@@ -1,12 +1,14 @@
 {% extends 'base.html'%}
-
+{% load staticfiles %}
 {% block contents %}
 <h3>주문내역</h3>
 <hr class="featurette-divider">
-<계좌정보><br>
-카카오뱅크 3333128692577 권민주
-<hr class="featurette-divider">
-
+<div class="container">
+    <계좌정보><br>
+        카카오뱅크 3333128692577 권민주<br>
+        <img src="{% static 'qr코드.jpg'%}" alt="qr코드" width="200"><br>
+        <hr class="featurette-divider">
+</div>
 {% for order in orders.all %}
 <div class="container">
     <div class="card">
@@ -17,7 +19,7 @@
                 <td width="100">{{order.customer_name}}</td>
                 <td width="40">{{order.secretphone}}</td>
                 <td width="50">{{order.location}}</td>
-                <td width="500">{{order.select_product}}</td>
+                <td width="550">{{order.select_product}}</td>
                 <td width="100">총 {{order.tot_price}}원</td>
                 <td width="100">{{order.condition}}</td>
                 <td>
