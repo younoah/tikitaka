@@ -46,6 +46,6 @@ def create(request):
     order.location = request.GET['location']
     order.pub_date = timezone.datetime.now()
     order.select_product = selected_product
-    order.total_price = tot_price
+    order.tot_price = tot_price
     order.save()
     return redirect('/list/')
