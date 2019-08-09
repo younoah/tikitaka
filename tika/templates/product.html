@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+
+{% block contents %}
+<h3>제품</h3>
+<hr class="featurette-divider">
+{% for product in products.all %}
+<div class="container">
+    <div class="card">
+        <div class="media">
+            <img src="{{ product.image.url }}" class="align-self-center mr-3" alt="..." width=200>
+            <div class="media-body">
+                <h5 class="mt-0">{{product.title}}</h5>
+                <p>{{product.description}}}</p>
+                <p class="mb-0">{{product.price}}원</p>
+            </div>
+        </div>
+    </div>
+</div>
+<hr class="featurette-divider">
+{% endfor %}
+
+{% endblock %}
