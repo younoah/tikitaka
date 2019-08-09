@@ -15,7 +15,7 @@ class Order(models.Model):
     customer_name = models.CharField(max_length = 10)
     customer_phone = models.CharField(max_length = 11)
     location = models.CharField(max_length = 2)
-    select_product = models.CharField()
+    select_product = models.CharField(max_length = 200)
     total_price = models.TextField()
     pub_date = models.DateTimeField('date published')
 
