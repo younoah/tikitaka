@@ -21,18 +21,20 @@ def create(request):
 
     selected_product = ''
     tot_price = 0
-    name = ['쿠키세트', '마들렌', '밀크 스콘', '햄치즈 브레드']
+    name = ['쿠키세트', '마들렌', '밀크 스콘', '햄치즈 브레드', '우유']
     products = {}  
     price = {}  
     products[name[0]] = request.GET['쿠키세트']
     products[name[1]] = request.GET['마들렌']
     products[name[2]] = request.GET['밀크 스콘']
     products[name[3]] = request.GET['햄치즈 브레드']
+    products[name[4]] = request.GET['우유']
 
     price[name[0]] = 3000
     price[name[1]] = 1000
     price[name[2]] = 2000
     price[name[3]] = 2000
+    price[name[4]] = 800
 
 
     for i in name:
