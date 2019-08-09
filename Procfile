@@ -1,1 +1,1 @@
-web: gunicorn d_tikaProject.wsgi --log-file -
+web: gunicorn tikaProject.wsgi --log-file -
