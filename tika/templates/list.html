@@ -3,6 +3,9 @@
 {% block contents %}
 <h3>주문내역</h3>
 <hr class="featurette-divider">
+<계좌정보><br>
+카카오뱅크 3333128692577 권민주
+<hr class="featurette-divider">
 
 {% for order in orders.all %}
 <div class="container">
@@ -14,7 +17,7 @@
                 <td>{{order.customer_name}}</td>
                 <td>{{order.secretphone}}</td>
                 <td>{{order.select_product}}</td>
-                <td>{{order.tot_price}}원</td>
+                <td>총 {{order.tot_price}}원</td>
                 <td>{{order.condition}}</td>
                 <td>
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">주문취소_구현중</button>
