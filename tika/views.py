@@ -29,9 +29,9 @@ def create(request):
     products[name[2]] = request.GET['밀크 스콘']
     products[name[3]] = request.GET['햄치즈 브레드']
 
-    price[name[0]] = 4000
+    price[name[0]] = 3000
     price[name[1]] = 1000
-    price[name[2]] = 1000
+    price[name[2]] = 2000
     price[name[3]] = 2000
 
 
