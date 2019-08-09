@@ -39,11 +39,12 @@ def create(request):
     price[name[3]] = 2000
     price[name[4]] = 800
 
-
+        
     for i in name:
         if int(products[i]) >= 1:
             selected_product += i + ' : ' + products[i] + '개, '
             tot_price += price[i]*int(products[i])
+
 
     order = Order()
     order.customer_name = request.GET['customer_name']
