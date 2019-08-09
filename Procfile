@@ -1,0 +1,1 @@
+web: gunicorn d_tikaProject.wsgi --log-file -
