@@ -7,6 +7,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', tika.views.home, name = 'home'),
+    path('how', tika.views.how, name = 'how'),
     path('product/', tika.views.product, name = 'product'),
     path('list/', tika.views.list, name = 'list'),
     path('order/', tika.views.order, name = 'order'),

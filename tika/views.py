@@ -5,6 +5,9 @@ from .models import Product, Order
 def home(request):
     return render(request, 'home.html')
 
+def how(request):
+        return render(request, 'how.html')
+
 def product(request):
     products = Product.objects
     return render(request, 'product.html', {'products' : products})
@@ -49,6 +52,6 @@ def create(request):
     order.pub_date = timezone.datetime.now()
     order.select_product = selected_product
     order.tot_price = tot_price
-    order.conditions = '주문접수'
+    order.condition = '주문접수'
     order.save()
     return redirect('/list/')
