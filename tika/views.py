@@ -8,6 +8,9 @@ def home(request):
 def how(request):
         return render(request, 'how.html')
 
+def introduce(request):
+        return render(request, 'introduce.html')
+
 def product(request):
     products = Product.objects
     return render(request, 'product.html', {'products' : products})

@@ -8,6 +8,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', tika.views.home, name = 'home'),
     path('how', tika.views.how, name = 'how'),
+    path('introduce', tika.views.introduce, name = 'introduce'),
     path('product/', tika.views.product, name = 'product'),
     path('list/', tika.views.list, name = 'list'),
     path('order/', tika.views.order, name = 'order'),
